@@ -8,7 +8,7 @@ Technologies Used
 
 Features
 - Singleton class 'Logger' ensures only one instance exists throughout the program.
-- Accepts *user input* for log messages.
+- Accepts user input for log messages.
 - Verifies whether the two logger references point to the same instance.
 
 How It Works
