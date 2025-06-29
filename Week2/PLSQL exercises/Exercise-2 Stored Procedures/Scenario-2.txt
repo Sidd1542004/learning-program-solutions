@@ -1,1 +1,12 @@
+CREATE OR REPLACE PROCEDURE print_numbers(p_n IN NUMBER) IS
+  i NUMBER := 1;
+BEGIN
+  WHILE i <= p_n LOOP
+    DBMS_OUTPUT.PUT_LINE('Number: ' || i);
+    i := i + 1;
+  END LOOP;
+END;
 
+BEGIN
+  print_numbers(5);
+END;
