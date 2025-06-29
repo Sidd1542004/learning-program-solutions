@@ -1,1 +1,19 @@
+-- Stored procedure to check grade
+CREATE OR REPLACE PROCEDURE check_grade(p_marks IN NUMBER) IS
+BEGIN
+  IF p_marks>=90 THEN
+    DBMS_OUTPUT.PUT_LINE('Grade: A');
+  ELSIF p_marks>=75 THEN
+    DBMS_OUTPUT.PUT_LINE('Grade: B');
+  ELSIF p_marks>=60 THEN
+    DBMS_OUTPUT.PUT_LINE('Grade: C');
+  ELSE
+    DBMS_OUTPUT.PUT_LINE('Grade: D');
+  END IF;
+END;
 
+
+-- Calling the procedure
+BEGIN
+  check_grade(82);
+END;
