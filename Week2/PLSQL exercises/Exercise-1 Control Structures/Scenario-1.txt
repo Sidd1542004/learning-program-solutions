@@ -1,1 +1,10 @@
+DECLARE @v_num INT=10;
 
+IF @v_num > 5
+BEGIN
+    PRINT 'Greater than 5';
+END
+ELSE
+BEGIN
+    PRINT '5 or less';
+END
