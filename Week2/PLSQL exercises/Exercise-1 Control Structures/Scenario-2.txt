@@ -1,1 +1,10 @@
+DECLARE @marks INT;
+SET @marks=40;   // input can be manipulated
 
+SELECT 
+    CASE 
+        WHEN @marks>=90 THEN 'Grade: A'
+        WHEN @marks>=75 THEN 'Grade: B'
+        WHEN @marks>=60 THEN 'Grade: C'
+        ELSE 'Grade:D'
+    END AS GradeResult;
