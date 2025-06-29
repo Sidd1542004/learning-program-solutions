@@ -1,1 +1,10 @@
+CREATE OR REPLACE PROCEDURE square_number(p_num IN NUMBER) IS
+  v_result NUMBER;
+BEGIN
+  v_result := p_num * p_num;
+  DBMS_OUTPUT.PUT_LINE('Square of ' || p_num || ' is ' || v_result);
+END;
 
+BEGIN
+  square_number(9);
+END;
