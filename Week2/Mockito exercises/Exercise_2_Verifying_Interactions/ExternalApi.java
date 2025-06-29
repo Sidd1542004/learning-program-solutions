@@ -1,4 +1,3 @@
-
 public interface ExternalApi {
-    void getData();
+    String getData();
 }
