@@ -1,23 +1,17 @@
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class NumberCheckerTest {
-
+public class NumberCheckerTest{
     @Test
-    public void testPositive() {
-        NumberChecker checker = new NumberChecker();
-        assertEquals("Positive", checker.checkNumber(5));
+    public void testCheckSign(){
+        assertEquals("Positive",NumberChecker.checkSign(5));
+        assertEquals("Negative",NumberChecker.checkSign(-3));
+        assertEquals("Zero",NumberChecker.checkSign(0));
     }
-
     @Test
-    public void testNegative() {
-        NumberChecker checker = new NumberChecker();
-        assertEquals("Negative", checker.checkNumber(-3));
-    }
-
-    @Test
-    public void testZero() {
-        NumberChecker checker = new NumberChecker();
-        assertEquals("Zero", checker.checkNumber(0));
+    public void testCheckEvenOdd(){
+        assertEquals("Even", NumberChecker.checkEvenOdd(4));
+        assertEquals("Odd", NumberChecker.checkEvenOdd(7));
+        assertEquals("Even", NumberChecker.checkEvenOdd(0));
     }
 }
